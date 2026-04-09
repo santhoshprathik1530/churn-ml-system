@@ -2,6 +2,10 @@
 
 Production-style end-to-end machine learning system for predicting customer churn on the BankChurners dataset. This project is intentionally structured like a small ML platform instead of a notebook-only workflow.
 
+## Live Demo
+
+- Hugging Face demo: [churn-ml-system](https://huggingface.co/spaces/santhoshprathik15/churn-ml-system)
+
 ## What This Project Demonstrates
 
 - Data ingestion and cleaning
@@ -183,6 +187,10 @@ Open:
 - dashboard: `http://127.0.0.1:8000/dashboard`
 - docs: `http://127.0.0.1:8000/docs`
 
+Hosted demo:
+
+- [https://huggingface.co/spaces/santhoshprathik15/churn-ml-system](https://huggingface.co/spaces/santhoshprathik15/churn-ml-system)
+
 ## Demo Deployment Strategy
 
 Recommended setup for interviews:
@@ -199,23 +207,13 @@ This gives you:
 
 ## Hugging Face Deployment
 
-This project is prepared to deploy the FastAPI app to Hugging Face Spaces using Docker.
-
-Files added for deployment:
-
-- `Dockerfile`
-- `README_HF_SPACES.md`
+The hosted FastAPI demo is deployed from the `hf_app/` folder, which contains the inference-only deployment bundle for Hugging Face Spaces.
 
 Recommended approach:
 
-- deploy only the FastAPI app and UI
+- keep this root repository as the full project showcase
+- deploy only `hf_app/` to Hugging Face
 - keep MLflow local
-
-Why:
-
-- FastAPI is the part meant for public demo use
-- MLflow is better kept as a local experiment tracking tool
-- this keeps the hosted project simpler and more reliable
 
 ## API Example
 
