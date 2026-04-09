@@ -197,6 +197,26 @@ This gives you:
 - a clean GitHub repo that shows the full project lifecycle
 - a local MLflow UI you can still open whenever you want to discuss experiments
 
+## Hugging Face Deployment
+
+This project is prepared to deploy the FastAPI app to Hugging Face Spaces using Docker.
+
+Files added for deployment:
+
+- `Dockerfile`
+- `README_HF_SPACES.md`
+
+Recommended approach:
+
+- deploy only the FastAPI app and UI
+- keep MLflow local
+
+Why:
+
+- FastAPI is the part meant for public demo use
+- MLflow is better kept as a local experiment tracking tool
+- this keeps the hosted project simpler and more reliable
+
 ## API Example
 
 ```bash
