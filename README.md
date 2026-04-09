@@ -106,6 +106,14 @@ Outputs:
 
 ## Run MLflow UI
 
+MLflow is intended for **local use in this project**.
+
+Reason:
+
+- the FastAPI app is the hosted demo
+- MLflow is kept as a local experiment tracking and model registry tool
+- this keeps deployment simpler and more stable for interviews
+
 Default:
 
 ```bash
@@ -123,7 +131,39 @@ Open:
 - `http://127.0.0.1:5000`
 - or `http://127.0.0.1:5001`
 
+### Important note about MLflow portability
+
+The repository can include:
+
+- `mlflow.db`
+- `mlruns/`
+- training artifacts and model files
+
+So if you lose your local setup later, you can clone the repo again and restore the project state.
+
+To get MLflow back locally:
+
+1. clone the repo
+2. create the virtual environment
+3. install dependencies
+4. run the MLflow UI again
+
+Example:
+
+```bash
+git clone <your-repo-url>
+cd churn-ml-system
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+PORT=5001 make mlflow
+```
+
+If the committed MLflow tracking files are present in the repo, the historical runs and metrics will appear again in the UI.
+
 ## Run FastAPI
+
+FastAPI is the part intended to be hosted as the live demo.
 
 Default:
 
@@ -142,6 +182,20 @@ Open:
 - prediction UI: `http://127.0.0.1:8000/`
 - dashboard: `http://127.0.0.1:8000/dashboard`
 - docs: `http://127.0.0.1:8000/docs`
+
+## Demo Deployment Strategy
+
+Recommended setup for interviews:
+
+- host the FastAPI app and browser UI on a public service
+- keep MLflow local
+- use GitHub for source code, data, models, and tracked outputs
+
+This gives you:
+
+- a public demo link for interviewers
+- a clean GitHub repo that shows the full project lifecycle
+- a local MLflow UI you can still open whenever you want to discuss experiments
 
 ## API Example
 

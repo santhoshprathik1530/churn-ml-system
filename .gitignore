@@ -4,13 +4,12 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 
-data/raw/
 data/processed/
 mlartifacts/
 mlruns/
-models/
 mlflow.db
 serving_metrics.db
+models/training_baseline.csv
 
 *.pyc
 *.pyo

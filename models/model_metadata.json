@@ -1,0 +1,34 @@
+{
+  "best_model_name": "xgboost",
+  "best_run_id": "d5188f04820c4653943c6b73d33e9879",
+  "registered_model_version": "5",
+  "metrics": {
+    "accuracy": 0.9723593287265548,
+    "precision": 0.9621993127147767,
+    "recall": 0.8615384615384616,
+    "f1_score": 0.9090909090909091,
+    "roc_auc": 0.9929851218740107
+  },
+  "feature_columns": [
+    "Customer_Age",
+    "Dependent_count",
+    "Months_on_book",
+    "Total_Relationship_Count",
+    "Months_Inactive_12_mon",
+    "Contacts_Count_12_mon",
+    "Credit_Limit",
+    "Total_Revolving_Bal",
+    "Avg_Open_To_Buy",
+    "Total_Amt_Chng_Q4_Q1",
+    "Total_Trans_Amt",
+    "Total_Trans_Ct",
+    "Total_Ct_Chng_Q4_Q1",
+    "Avg_Utilization_Ratio",
+    "Gender",
+    "Education_Level",
+    "Marital_Status",
+    "Income_Category",
+    "Card_Category"
+  ],
+  "target_column": "Attrition_Flag"
+}
